@@ -19,7 +19,7 @@ jobs:
       - name: Deploy Docker Image to Azure Web App
         run: |
           az webapp config container set \
-            --name portal-kharis99 \
+            --name portal-kharis-99 \
             --resource-group rg-kharisediwardana \
             --docker-custom-image-name kewtz9/my-js-app:latest \
             --docker-registry-server-url https://index.docker.io
