@@ -1,0 +1,16 @@
+{
+	"name": "Oracle_Departments",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OracleXE_LinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OracleTable",
+		"typeProperties": {
+			"schema": "SYSTEM",
+			"table": "DEPARTMENTS"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

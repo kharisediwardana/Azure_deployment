@@ -1,0 +1,16 @@
+{
+	"name": "Oracle_Employees",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OracleXE_LinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OracleTable",
+		"typeProperties": {
+			"schema": "SYSTEM",
+			"table": "EMPLOYEES"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

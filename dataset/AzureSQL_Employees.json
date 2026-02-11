@@ -1,0 +1,16 @@
+{
+	"name": "AzureSQL_Employees",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSQL_OcmsIntranet_LinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "EMPLOYEES"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

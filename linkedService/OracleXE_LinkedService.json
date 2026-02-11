@@ -1,0 +1,16 @@
+{
+	"name": "OracleXE_LinkedService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "Oracle",
+		"connectVia": {
+			"referenceName": "SelfHostedIR",
+			"type": "IntegrationRuntimeReference"
+		},
+		"typeProperties": {
+			"connectionString": "host=localhost;port=1521;sid=XE;user id=SYSTEM",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxYTk2NjZkNC0zMjQzLTQ5OGQtOTYyYS0xNmY2M2IzOGM2M2QiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"annotations": []
+	}
+}

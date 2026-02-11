@@ -1,0 +1,87 @@
+{
+	"name": "Oracle_to_AzureSQL_Migration",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_Departments",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "OracleSource",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "Oracle_Departments",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSQL_Departments",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Copy_Employees",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Copy_Departments",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "OracleSource",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "Oracle_Employees",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSQL_Employees",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-02-11T06:56:22Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

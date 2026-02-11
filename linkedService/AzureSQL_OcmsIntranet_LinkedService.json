@@ -1,0 +1,12 @@
+{
+	"name": "AzureSQL_OcmsIntranet_LinkedService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "server=tcp:uraproject.database.windows.net,1433;database=ocmsintranet;user id=dbadmin;encrypt=true;trustservercertificate=false;connection timeout=30",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEQ2MzY1ODk5LUVFRTMtNDQzOS04MTRDLUMxMzA3M0YyOTQ2Ml9iNjZiZDJlMS00YjBkLTRjZDgtOWY3Yi04ODdiZGE1M2VkMzIiDQp9"
+		},
+		"annotations": []
+	}
+}

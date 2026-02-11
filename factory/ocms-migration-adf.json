@@ -1,0 +1,9 @@
+{
+	"name": "ocms-migration-adf",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6f7ce4cc-8387-461b-a21e-f4349c75718b",
+		"tenantId": "ee9c9f27-7cda-470a-9afb-b28df14bea17"
+	}
+}
